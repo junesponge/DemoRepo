@@ -33,4 +33,13 @@ public class HelloController {
         user.setAge(age);
         return userRepository.save(user);
     }
+
+    @RequestMapping(value = "/updateUser", method = RequestMethod.GET)
+    public TblUser addUser(@RequestParam("id") int id, @RequestParam("name") String name, @RequestParam("age") int age) {
+        TblUser user = new TblUser();
+        user.setId(id);
+        user.setName(name);
+        user.setAge(age);
+        return userRepository.save(user);
+    }
 }
